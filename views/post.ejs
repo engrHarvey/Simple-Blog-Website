@@ -1,0 +1,43 @@
+<%- include("partials/header.ejs") %>
+<div class="row">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom header-post col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4"><h1>My Blog</h1></span>
+    </a>
+  
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="/" class="nav-link bg-dark text-light" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="/contact" class="nav-link text-dark">Contact</a></li>
+      <li class="nav-item"><a href="/about" class="nav-link text-dark">About</a></li>
+    </ul>
+  </header>
+</div>
+<body>
+<main class="container">
+
+<div class="container">
+  <form method="POST">
+    <label for="id">Post ID</label>
+    <input type="text" name="id" placeholder="Required for updating or deleting post." required>
+
+    <label for="title">Change Title</label>
+    <input type="text" name="title">
+
+    <label for="name">Change Name</label>
+    <input type="text" name="name">
+
+    <label for="image">Change Image URL</label>
+    <input type="text" name="img-url">
+
+    <label for="content">Change Content</label>
+    <textarea type="text" name="content"></textarea>
+    
+  
+    <input class="submit-button" id="put" type="submit" value="UPDATE" formaction="/update-post">
+    <input class="submit-button delete" id="delete" type="submit" value="DELETE" formaction="/delete-post">
+</form>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,49 @@
+<%- include("partials/header.ejs") %>
+<div class="row">
+<header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    <span class="fs-4"><h1>My Blog</h1></span>
+  </a>
+
+  <ul class="nav nav-pills">
+    <li class="nav-item"><a href="/" class="nav-link bg-dark text-light" aria-current="page">Home</a></li>
+    <li class="nav-item"><a href="/contact" class="nav-link text-dark">Contact</a></li>
+    <li class="nav-item"><a href="/about" class="nav-link text-dark">About</a></li>
+  </ul>
+</header>
+</div>
+<body>
+<main class="container">
+<div class="home-contents">
+
+  <div class="item-content">
+    
+    <% if (locals.allItemsArray) { %>
+  <%  for (let i = 0; i < allItemsArray.length; i++) { %>
+
+    <div class="item">
+      <a href="/post" class="post-title<%= i %>" id="<%= i %>">
+    <h2 name="blog-title-home"><%= allItemsArray[i]["blogTitle"] %></h2>
+      </a>
+
+    <img class="img-content" src=<%= allItemsArray[i]["blogImage"] %> alt="blog image">
+    <p><%= allItemsArray[i]["blogContent"] %></p>
+
+    <% const date = new Date(); %>
+
+    <p>Posted by <span><%= allItemsArray[i]["nameOfBlogger"] %></span> on <span><%= date.toDateString() %></span>. Post id: <%= allItemsArray[i]["id"] %>.</p>
+    <p>Click title to edit post.</p>
+
+    <% } %>
+  <% } else { %>
+
+    <h2>Post Here</h2>
+
+  <% } %>
+  </div>
+  </div>
+
+  <a href="/new-post"><button class="create">Create New Post</button></a>
+</div>
+<%- include("partials/footer.ejs") %>
