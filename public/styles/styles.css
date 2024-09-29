@@ -149,3 +149,255 @@ a {
     width: 250px;
   }
 }
+
+/* General Body and Typography */
+body {
+  background-color: #FBF8DD;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Lobster', cursive;
+  font-weight: bold;
+  text-shadow: 1px 1px white;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #555;
+}
+
+/* Header Section Styles */
+header {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.header-contact, .header-about, .header-post {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.header-contact h2, .header-about h2, .header-post h2 {
+  margin-top: 100px;
+}
+
+/* Navigation Styles */
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: #555;
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 20px 30px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer svg {
+  height: 40px;
+  fill: white;
+}
+
+footer a {
+  color: #ddd;
+}
+
+footer a:hover {
+  color: #bbb;
+}
+
+/* Form and Button Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 50px;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+form label {
+  font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.submit-button, .delete, .create {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.submit-button {
+  background-color: #A0937D;
+  color: white;
+}
+
+.delete {
+  background-color: #E74C3C;
+  color: white;
+}
+
+.submit-button:hover, .delete:hover, .create:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Section Styles */
+.home-contents, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.item-content {
+  background: #ffffff;
+  padding: 50px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.item-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Profile and Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.profile {
+  height: 300px;
+  width: 300px;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  border: 4px solid #ddd;
+}
+
+@media (max-width: 850px) {
+  .profile {
+    height: 200px;
+    width: 200px;
+  }
+
+  .item-content {
+    padding: 30px;
+  }
+  
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  header {
+    height: 250px;
+  }
+
+  .profile {
+    height: 150px;
+    width: 150px;
+  }
+
+  .item-content {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile {
+    height: 100px;
+    width: 100px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  img {
+    width: 200px;
+  }
+}
